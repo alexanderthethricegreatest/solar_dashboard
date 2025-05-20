@@ -5,7 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 app = Flask(__name__)
 
-def get_sheet_data(sheet_name="Solar WV News"):
+def get_sheet_data(sheet_name="WV SOLAR NEWS"):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     creds = ServiceAccountCredentials.from_json_keyfile_name("gsheet_creds.json", scope)
     client = gspread.authorize(creds)
